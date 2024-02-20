@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B21CAC82B84A284004EE892 /* RootPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B21CAC72B84A284004EE892 /* RootPage.m */; };
 		BC18E03F156B354000AB8026 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC18E03E156B354000AB8026 /* CoreMedia.framework */; };
 		BCB3C41116BCA74F003D26B0 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB3C40E16BCA74F003D26B0 /* Icon-72.png */; };
 		BCB3C41216BCA74F003D26B0 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB3C40F16BCA74F003D26B0 /* Icon-72@2x.png */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B21CAC62B84A284004EE892 /* RootPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootPage.h; sourceTree = "<group>"; };
+		9B21CAC72B84A284004EE892 /* RootPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootPage.m; sourceTree = "<group>"; };
 		BC18E03E156B354000AB8026 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		BCB3C40E16BCA74F003D26B0 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../../SharedIcons/Icon-72.png"; sourceTree = "<group>"; };
 		BCB3C40F16BCA74F003D26B0 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../../SharedIcons/Icon-72@2x.png"; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 			children = (
 				BCF1E6151569D372006B155F /* RawDataTestAppDelegate.h */,
 				BCF1E6161569D372006B155F /* RawDataTestAppDelegate.m */,
+				9B21CAC62B84A284004EE892 /* RootPage.h */,
+				9B21CAC72B84A284004EE892 /* RootPage.m */,
 				BCF1E63E156AAB4E006B155F /* CalculationShader.fsh */,
 				BCF1E60D1569D372006B155F /* Supporting Files */,
 			);
@@ -198,12 +203,18 @@
 				CLASSPREFIX = RawDataTest;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Cell Phone";
+				TargetAttributes = {
+					BCF1E6011569D372006B155F = {
+						DevelopmentTeam = 7XH8ZQQ2YY;
+					};
+				};
 			};
 			buildConfigurationList = BCF1E5FC1569D372006B155F /* Build configuration list for PBXProject "RawDataTest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = BCF1E5F71569D372006B155F;
@@ -264,6 +275,7 @@
 			files = (
 				BCF1E6131569D372006B155F /* main.m in Sources */,
 				BCF1E6171569D372006B155F /* RawDataTestAppDelegate.m in Sources */,
+				9B21CAC82B84A284004EE892 /* RootPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,8 +370,13 @@
 		BCF1E61B1569D372006B155F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7XH8ZQQ2YY;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RawDataTest/RawDataTest-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					../../../framework/Source,
+					"../../../framework/Source/iOS/**",
+				);
 				INFOPLIST_FILE = "RawDataTest/RawDataTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -369,8 +386,13 @@
 		BCF1E61C1569D372006B155F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7XH8ZQQ2YY;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RawDataTest/RawDataTest-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					../../../framework/Source,
+					"../../../framework/Source/iOS/**",
+				);
 				INFOPLIST_FILE = "RawDataTest/RawDataTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

@@ -1,5 +1,5 @@
 #import "RawDataTestAppDelegate.h"
-
+#import "RootPage.h"
 @implementation RawDataTestAppDelegate
 
 @synthesize window = _window;
@@ -8,6 +8,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    self.window.rootViewController = [RootPage new];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
